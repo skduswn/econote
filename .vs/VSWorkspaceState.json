@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\EcoNote"
+    "\\EcoNote",
+    "\\EcoNote\\View"
   ],
-  "SelectedNode": "\\EcoNote\\EcoNote.sln",
+  "SelectedNode": "\\EcoNote\\View\\Donation.xaml",
   "PreviewInSolutionExplorer": false
 }

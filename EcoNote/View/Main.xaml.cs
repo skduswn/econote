@@ -44,5 +44,10 @@ namespace EcoNote.View
         {
             NavigationService.Navigate(new Uri("/View/Exchange.xaml", UriKind.Relative));
         }
+
+        private void Button_Click_5(object sender, RoutedEventArgs e) //교환권으로
+        {
+            NavigationService.Navigate(new Uri("/View/Showgift.xaml", UriKind.Relative));
+        }
     }
 }
