@@ -1,0 +1,36 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace EcoNote.Model
+{
+    class donation
+    {
+        private int num;
+
+        public int dNum
+        {
+            get { return num; }
+            set { num = value; }
+        }
+
+
+        private string userId;
+
+        public string dUserId
+        {
+            get { return userId; }
+            set { userId = value; }
+        }
+
+        private int money;
+
+        public int dMoney
+        {
+            get { return money; }
+            set { money = value; }
+        }
+    }
+}

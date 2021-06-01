@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5D2364BE-A051-4C04-B612-FAE336A167E7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>EcoNote</RootNamespace>
+    <AssemblyName>EcoNote</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.20.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\MySQL\Connector NET 8.0\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Model\donation.cs" />
+    <Compile Include="Model\exchange.cs" />
+    <Compile Include="Model\giftcard.cs" />
+    <Compile Include="Model\move.cs" />
+    <Compile Include="Model\products.cs" />
+    <Compile Include="Model\user.cs" />
+    <Compile Include="ViewModel\DonationVM.cs" />
+    <Compile Include="ViewModel\ExchangeVM.cs" />
+    <Compile Include="ViewModel\JoinVM.cs" />
+    <Compile Include="ViewModel\LoginVM.cs" />
+    <Compile Include="ViewModel\NoteVM.cs" />
+    <Compile Include="View\Donation.xaml.cs">
+      <DependentUpon>Donation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Exchange.xaml.cs">
+      <DependentUpon>Exchange.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Home.xaml.cs">
+      <DependentUpon>Home.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Join.xaml.cs">
+      <DependentUpon>Join.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Main.xaml.cs">
+      <DependentUpon>Main.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Note.xaml.cs">
+      <DependentUpon>Note.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Showgift.xaml.cs">
+      <DependentUpon>Showgift.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="View\Donation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Exchange.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Home.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Join.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Main.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Note.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Showgift.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="이미지\회원가입.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="이미지\로그인.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="이미지\로고.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="이미지\교환.png" />
+    <Resource Include="이미지\기록.png" />
+    <Resource Include="이미지\기부.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="이미지\걷기.png" />
+    <Resource Include="이미지\달리기.png" />
+    <Resource Include="이미지\자전거.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="이미지\기록하기.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="이미지\스몰로고.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="이미지\기부2.png" />
+    <Resource Include="이미지\화살표.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="이미지\기부1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="이미지\기부하기.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="이미지\상품권\1인영화관람권.jpg" />
+    <Resource Include="이미지\상품권\가나마일드초콜렛.jpg" />
+    <Resource Include="이미지\상품권\교촌허니콤보웨지감자세트.jpg" />
+    <Resource Include="이미지\상품권\던킨모바일교환권.jpg" />
+    <Resource Include="이미지\상품권\망고치즈빙수설빙.jpg" />
+    <Resource Include="이미지\상품권\바나나맛우유.jpg" />
+    <Resource Include="이미지\상품권\빅맥세트.jpg" />
+    <Resource Include="이미지\상품권\서브웨이모바일금액권.jpg" />
+    <Resource Include="이미지\상품권\스타벅스세트.jpg" />
+    <Resource Include="이미지\상품권\스타벅스아메리카노.jpg" />
+    <Resource Include="이미지\상품권\육개장사발면.jpg" />
+    <Resource Include="이미지\상품권\초코에몽.jpg" />
+    <Resource Include="이미지\상품권\츄파춥스.jpg" />
+    <Resource Include="이미지\상품권\파리바게트모바일금액권.jpg" />
+    <Resource Include="이미지\상품권\파인트.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="이미지\교환하기.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="이미지\상품권\비타500.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
