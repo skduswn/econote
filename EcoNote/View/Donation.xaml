@@ -16,9 +16,9 @@
             </Button.Background>
         </Button>
 
-        <TextBox x:Name="idsession" HorizontalAlignment="Left" Margin="470,26,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.383,-0.033" FontSize="36" FontWeight="Bold" Height="53" Width="108" BorderBrush="{x:Null}" Background="{x:Null}" />
-        <TextBlock HorizontalAlignment="Left" Height="54" Margin="578,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162" FontSize="36" Foreground="YellowGreen" FontWeight="Bold"><Run Text="님의 "/><Run Text="코인"/></TextBlock>
-        <TextBox x:Name="idsession_Copy" HorizontalAlignment="Left" Margin="739,26,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.383,-0.033" FontSize="36" FontWeight="Bold" Height="53" Width="118" BorderBrush="{x:Null}" Background="{x:Null}" />
+        <TextBox x:Name="textboxid"   HorizontalAlignment="Left" Height="37" Margin="602,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" FontSize="18"/>
+        <TextBlock HorizontalAlignment="Left" Height="41" Margin="677,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="147" FontSize="25" Foreground="YellowGreen" FontWeight="Bold"><Run Text="님의 "/><Run Text="코인"/></TextBlock>
+        <TextBox x:Name="textboxc"   HorizontalAlignment="Left" Height="37" Margin="789,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" FontSize="18"/>
 
 
         <Button Content="" HorizontalAlignment="Left" Height="135" Margin="10,10,0,0" VerticalAlignment="Top" Width="245" BorderBrush="White" RenderTransformOrigin="1.246,0.522" Click="Button_Click_1">
@@ -32,11 +32,11 @@
 
         <Image HorizontalAlignment="Left" Height="289" Margin="514,183,0,0" VerticalAlignment="Top" Width="289" Source="C:\연주\github\EcoNote\이미지\기부2.png"/>
         <Image HorizontalAlignment="Left" Height="88" Margin="387,290,0,0" VerticalAlignment="Top" Width="111" Source="C:\연주\github\EcoNote\이미지\화살표.png"/>
-        <TextBox x:Name="idsession_Copy1" HorizontalAlignment="Left" Margin="130,264,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.383,-0.033" FontSize="36" FontWeight="Bold" Height="59" Width="120" BorderBrush="{x:Null}" Background="{x:Null}" />
-        <TextBox x:Name="idsession_Copy2" HorizontalAlignment="Left" Margin="578,277,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.383,-0.033" FontSize="36" FontWeight="Bold" Height="59" Width="120" BorderBrush="{x:Null}" Background="{x:Null}" />
+        <TextBox x:Name="money"  HorizontalAlignment="Left" Height="33" Margin="133,287,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="115" FontSize="18" BorderBrush="YellowGreen" />
+        <TextBox x:Name="totalMoney"  HorizontalAlignment="Left" Height="33" Margin="574,300,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="115" FontSize="18" BorderBrush="YellowGreen" />
 
 
-        <Button Content="" HorizontalAlignment="Left" Height="44" Margin="168,361,0,0" VerticalAlignment="Top" Width="99" BorderBrush="White" RenderTransformOrigin="1.246,0.522">
+        <Button Content="" HorizontalAlignment="Left" Height="44" Margin="168,361,0,0" VerticalAlignment="Top" Width="99" BorderBrush="White" RenderTransformOrigin="1.246,0.522" Click="Button_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/이미지/기부하기.png"/>
             </Button.Background>

@@ -59,12 +59,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Model\donation.cs" />
-    <Compile Include="Model\exchange.cs" />
-    <Compile Include="Model\giftcard.cs" />
-    <Compile Include="Model\move.cs" />
-    <Compile Include="Model\products.cs" />
-    <Compile Include="Model\user.cs" />
+    <Compile Include="DataManager.cs" />
+    <Compile Include="Model\Donation.cs" />
+    <Compile Include="Model\Exchange.cs" />
+    <Compile Include="Model\Move.cs" />
+    <Compile Include="Model\Products.cs" />
+    <Compile Include="Model\User.cs" />
     <Compile Include="ViewModel\DonationVM.cs" />
     <Compile Include="ViewModel\ExchangeVM.cs" />
     <Compile Include="ViewModel\JoinVM.cs" />

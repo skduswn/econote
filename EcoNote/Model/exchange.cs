@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EcoNote.Model
 {
-    class exchange
+    class Exchange
     {
         private int num;
 
@@ -32,28 +32,13 @@ namespace EcoNote.Model
             set { pNum = value; }
         }
 
-        private int amount;
-
-        public int eAmount
-        {
-            get { return amount; }
-            set { amount = value; }
-        }
-
+ 
         private int price;
 
         public int ePrice
         {
             get { return price; }
             set { price = value; }
-        }
-
-        private DateTime date;
-
-        public DateTime eDate
-        {
-            get { return date; }
-            set { date = value; }
         }
 
     }

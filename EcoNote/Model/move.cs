@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EcoNote.Model
 {
-    class move
+    class Move
     {
         private int num;
 

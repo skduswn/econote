@@ -10,7 +10,7 @@
 
     <Grid Margin="0,1,0,-1">
         <Label Content="아이디" HorizontalAlignment="Left" Height="43" Margin="251,193,0,0" VerticalAlignment="Top" Width="214" FontSize="18" Foreground="#FF060606"/>
-        <TextBox x:Name="textbox1" HorizontalAlignment="Left" Height="36" Margin="350,191,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" FontSize="18" BorderBrush="YellowGreen" />
+        <TextBox x:Name="textbox1" Text="{Binding uId}" HorizontalAlignment="Left" Height="36" Margin="350,191,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" FontSize="18" BorderBrush="YellowGreen" />
         <Label Content="비밀번호" HorizontalAlignment="Left" Height="45" Margin="251,259,0,0" VerticalAlignment="Top" Width="304" IsEnabled="False" FontSize="18" Foreground="Black"/>
         <PasswordBox x:Name="passwordbox" HorizontalAlignment="Left" Margin="350,257,0,0" VerticalAlignment="Top" Width="303" Height="36" FontSize="18" RenderTransformOrigin="0.5,0.5" BorderBrush="YellowGreen">
             <PasswordBox.RenderTransform>

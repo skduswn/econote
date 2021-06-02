@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EcoNote.Model
 {
-    class user
+    class User
     {
         private string id;
 

@@ -32,7 +32,7 @@ namespace EcoNote.View
             NavigationService.Navigate(new Uri("/view/Home.xaml", UriKind.Relative));
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e) //회원가입 성공시 로그인화면
+        private void Button_Click_2(object sender, RoutedEventArgs e) //회원가입 성공시 로그인화면으로
         {
             //모든 정보 입력하도록
             if (string.IsNullOrEmpty(textbox1.Text))
@@ -68,14 +68,26 @@ namespace EcoNote.View
                 MySqlCommand comm = new MySqlCommand();
                 conn.Open();
 
-                
+                comm.CommandText = "INSERT INTO USER(uName, uPNum, uId, uPwd) VALUES (@uName, @uPNum, @uId, @uPwd)";
+
+                comm.Parameters.Add("@uName", MySqlDbType.Text).Value = textbox1.Text;
+                comm.Parameters.Add("@uPNum", MySqlDbType.Text).Value = textbox2.Text;
+                comm.Parameters.Add("@uId", MySqlDbType.Text).Value = textbox3.Text;
+                comm.Parameters.Add("@uPwd", MySqlDbType.Text).Value = textbox4.Text;
+
+                comm.Connection = conn;
+
+                comm.ExecuteNonQuery();
+                conn.Close();
+
+                MessageBox.Show("회원가입 되었습니다.");
+                NavigationService.Navigate(new Uri("/view/Login.xaml", UriKind.Relative));
             }
             catch (Exception ex)
-            { MessageBox.Show("아이디가 중복 되었습니다."); }
+            { 
+                MessageBox.Show("아이디가 중복 되었습니다."); }
                
-
-                NavigationService.Navigate(new Uri("/view/Login.xaml", UriKind.Relative));
-        }
+            }
 
        
     }

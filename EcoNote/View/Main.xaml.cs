@@ -1,5 +1,9 @@
-﻿using System;
+﻿
+using EcoNote.Model;
+using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +27,27 @@ namespace EcoNote.View
         public Main()
         {
             InitializeComponent();
+
+            this.DataContext = this;
+
+            //user table list화 하기
+            string connectionString = "Server=localhost;Database=econote;UId=root;Password=5458;";
+            MySqlConnection connection = new MySqlConnection(connectionString);
+            MySqlCommand cmd = new MySqlCommand("select * from user", connection);
+            connection.Open();
+            DataTable dt = new DataTable();
+            dt.Load(cmd.ExecuteReader());
+            List<User> Users = dt.DataTableToList<User>();
+
+
+            //uId session값 textbox에 넣기
+            //uTotalC session 값 textbox에 넣기
+            User user = Users.Single((x) => x.uId.ToString() == (string)Application.Current.Properties["loginID"]);
+            textboxid.Text = user.uId.ToString();
+            textboxc.Text = user.uTotalC.ToString();
+
+            connection.Close();
+
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)  //메인으로
