@@ -16,7 +16,14 @@
             </Button.Background>
         </Button>
 
-        <TextBox x:Name="textboxid" HorizontalAlignment="Left" Margin="155,149,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.383,-0.033" FontSize="36" FontWeight="Bold" Height="53" Width="127" BorderBrush="{x:Null}" Background="{x:Null}" >
+
+        <TextBox x:Name="textboxid"   HorizontalAlignment="Left" Height="37" Margin="602,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" FontSize="18"/>
+        <TextBlock HorizontalAlignment="Left" Height="41" Margin="677,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="147" FontSize="25" Foreground="YellowGreen" FontWeight="Bold"><Run Text="님의 "/><Run Text="코인"/></TextBlock>
+        <TextBox x:Name="textboxc"   HorizontalAlignment="Left" Height="37" Margin="789,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" FontSize="18"/>
+
+
+
+        <TextBox x:Name="textboxid2" HorizontalAlignment="Left" Margin="155,149,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.383,-0.033" FontSize="36" FontWeight="Bold" Height="53" Width="127" BorderBrush="{x:Null}" Background="{x:Null}" >
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -31,14 +38,19 @@
         <DataGrid x:Name="dtGrid"  HorizontalAlignment="Left" Height="330" Margin="10,199,0,0" VerticalAlignment="Top" Width="639" BorderBrush="{x:Null}" ItemsSource="{Binding}" SelectionChanged="DataGrid_SelectionChanged"/>
         <Border BorderBrush="LightGray" BorderThickness="3" HorizontalAlignment="Left" Height="344" Margin="660,185,0,0" VerticalAlignment="Top" Width="213"/>
         <Label Content="교환권 정보" HorizontalAlignment="Left" Height="54" VerticalAlignment="Top" Width="196" Background="{x:Null}" FontSize="24" BorderBrush="White" FontWeight="Bold" Margin="698,199,0,0"/>
-        <TextBox x:Name="busnum3" HorizontalAlignment="Left" Height="37" Margin="698,354,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" FontSize="18" RenderTransformOrigin="0.148,0.615" />
-        <Label Content="상품명" HorizontalAlignment="Left" Height="40" Margin="729,247,0,0" VerticalAlignment="Top" Width="74" FontSize="20" FontWeight="Bold" RenderTransformOrigin="1.561,-4.249"/>
-        <TextBox x:Name="name" HorizontalAlignment="Left" Height="37" Margin="698,278,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" FontSize="18"/>
-        <Label Content="금액" HorizontalAlignment="Left" Height="40" Margin="740,323,0,0" VerticalAlignment="Top" Width="63" FontSize="20" FontWeight="Bold"/>
+        <TextBox x:Name="price" HorizontalAlignment="Left" Height="37" Margin="698,423,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" FontSize="18" RenderTransformOrigin="0.148,0.615" />
+        <Label Content="상품번호" HorizontalAlignment="Left" Height="40" Margin="698,287,0,0" VerticalAlignment="Top" Width="90" FontSize="20" FontWeight="Bold" RenderTransformOrigin="1.561,-4.249"/>
+        <TextBox x:Name="num" HorizontalAlignment="Left" Height="37" Margin="788,290,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="56" FontSize="18"/>
+        <Label Content="금액" HorizontalAlignment="Left" Height="40" Margin="740,392,0,0" VerticalAlignment="Top" Width="63" FontSize="20" FontWeight="Bold"/>
         <Button Content="" HorizontalAlignment="Left" Height="47" Margin="713,478,0,0" VerticalAlignment="Top" Width="119" BorderBrush="White" RenderTransformOrigin="1.246,0.522" Click="Button_Click_1">
             <Button.Background>
                 <ImageBrush ImageSource="C:\Users\nyj54\OneDrive\바탕 화면\github\EcoNote\이미지\교환취소.png"/>
             </Button.Background>
         </Button>
+        <Label Content="상품명" HorizontalAlignment="Left" Height="40" Margin="729,320,0,0" VerticalAlignment="Top" Width="74" FontSize="20" FontWeight="Bold" RenderTransformOrigin="1.561,-4.249"/>
+        <TextBox x:Name="name" HorizontalAlignment="Left" Height="37" Margin="698,351,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" FontSize="18"/>
+        <Label Content="교환번호" HorizontalAlignment="Left" Height="40" Margin="698,250,0,0" VerticalAlignment="Top" Width="90" FontSize="20" FontWeight="Bold" RenderTransformOrigin="1.561,-4.249"/>
+        <TextBox x:Name="eum" HorizontalAlignment="Left" Height="37" Margin="788,253,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="56" FontSize="18"/>
+    
     </Grid>
 </Page>

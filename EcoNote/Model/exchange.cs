@@ -24,15 +24,22 @@ namespace EcoNote.Model
             set { userId = value; }
         }
 
-        private int pNum;
+        private string pNum;
 
-        public int ePNum
+        public string ePNum
         {
             get { return pNum; }
             set { pNum = value; }
         }
 
- 
+        private string pName;
+
+        public string ePName
+        {
+            get { return pName; }
+            set { pName = value; }
+        }
+
         private int price;
 
         public int ePrice
@@ -40,6 +47,8 @@ namespace EcoNote.Model
             get { return price; }
             set { price = value; }
         }
+
+        
 
     }
 }

@@ -62,12 +62,12 @@ namespace EcoNote.View
 
         private void Button_Click_3(object sender, RoutedEventArgs e) //기부로
         {
-            NavigationService.Navigate(new Uri("/View/Donation.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/View/Dona.xaml", UriKind.Relative));
         }
 
         private void Button_Click_4(object sender, RoutedEventArgs e) //교환으로
         {
-            NavigationService.Navigate(new Uri("/View/Exchange.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/View/Exch.xaml", UriKind.Relative));
         }
 
         private void Button_Click_5(object sender, RoutedEventArgs e) //교환권으로

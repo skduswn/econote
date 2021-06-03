@@ -1,5 +1,4 @@
-﻿
-using EcoNote.Model;
+﻿using EcoNote.Model;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -20,11 +19,11 @@ using System.Windows.Shapes;
 namespace EcoNote.View
 {
     /// <summary>
-    /// Donation.xaml에 대한 상호 작용 논리
+    /// Dona.xaml에 대한 상호 작용 논리
     /// </summary>
-    public partial class Donation : Page
+    public partial class Dona : Page
     {
-        public Donation()
+        public Dona()
         {
             InitializeComponent();
 
@@ -48,6 +47,7 @@ namespace EcoNote.View
 
             connection.Close();
         }
+
 
 
         private void Button_Click_1(object sender, RoutedEventArgs e) //로고
@@ -100,22 +100,22 @@ namespace EcoNote.View
 
                 //user의 totalC에서 기부금만큼 감소시키기
 
-                string connectionsString = @"server=localhost;userid=root;password=5458;database=econote";
+                string connectionsString3 = @"server=localhost;userid=root;password=5458;database=econote";
                 MySqlConnection connection = null;
                 try
                 {
-                    connection = new MySqlConnection(connectionsString);
+                    connection = new MySqlConnection(connectionsString3);
                     connection.Open();
 
 
-                    MySqlCommand cmd = new MySqlCommand();
-                    cmd.Connection = connection;
+                    MySqlCommand cmd5 = new MySqlCommand();
+                    cmd5.Connection = connection;
 
 
-                    cmd.CommandText = "UPDATE user SET  uTotalC = uTotalC - " + this.money.Text + " WHERE uId='" + this.textboxid.Text + "';";
+                    cmd5.CommandText = "UPDATE user SET  uTotalC = uTotalC - " + this.money.Text + " WHERE uId='" + this.textboxid.Text + "';";
 
 
-                    cmd.ExecuteNonQuery();
+                    cmd5.ExecuteNonQuery();
 
 
                 }
@@ -130,44 +130,48 @@ namespace EcoNote.View
 
 
 
+            ////////////////////////////////////////////////////////////////////////////////////
+
+            // Donation테이블에서 uid== 해당아이디인 행의 dMoney의 합으로 누적기부금 구하기
 
 
-            ////Donation테이블에서 uid==해당아이디인 행의 dMoney의 합으로 누적기부금 구하기
-
-            ////Donation 테이블 리스트화
-            //string connectionString = "Server=localhost;Database=econote;UId=root;Password=5458;";
-            //MySqlConnection conn = new MySqlConnection(connectionString);
-            //MySqlCommand cmd = new MySqlCommand("select * from donation", conn) ;
-            //conn.Open();
-            //DataTable dt = new DataTable();
-            //dt.Load(cmd.ExecuteReader());
-            //List<Donation> donations = dt.DataTableToList<Donation>();
-
-            //int sumM = donations.Sum((x) => x.dUserId.ToString() == textboxid.Text);
+            ////Donation 해당아이디와 Uid같은 행들을 리스트화
+            string conString = "Server=localhost;Database=EcoNote;UId=root;Password=5458;";
+            MySqlConnection con = new MySqlConnection(conString);
+            MySqlCommand command = new MySqlCommand("select * from donation where dUserid = '" + textboxid.Text + "';", con);
+            con.Open();
+            DataTable dt = new DataTable();
+            dt.Load(command.ExecuteReader());
+            List<Donation> donations = dt.DataTableToList<Donation>();
 
 
-            //conn.Close();
+            int sumD = donations.Sum((x) => x.dMoney);
 
+            con.Close();
+            MessageBox.Show(sumD.ToString());
 
 
 
 
+
+            ////누적 기부금 txtbox에 넣어주기
+            //totalMoney.Text = sumD.ToString();
 
 
             ////user의 기부금 누적기부금에 update해주기
             //string connectionsString = @"server=localhost;userid=root;password=5458;database=econote";
-            //MySqlConnection connection1 = null;
+            //MySqlConnection connection2 = null;
             //try
             //{
-            //    connection1 = new MySqlConnection(connectionsString);
-            //    connection1.Open();
+            //    connection2 = new MySqlConnection(connectionsString);
+            //    connection2.Open();
 
 
             //    MySqlCommand cmd1 = new MySqlCommand();
-            //    cmd1.Connection = connection1;
+            //    cmd1.Connection = connection2;
 
 
-            //    cmd1.CommandText = "UPDATE user SET uTotalD = uTotalD + " + this.money + " WHERE uId='" + this.textboxid.Text + "';";
+            //    cmd1.CommandText = "UPDATE user SET uTotalD = uTotalD + " + this.totalMoney + " WHERE uId='" + this.textboxid.Text + "';";
 
 
             //    cmd1.ExecuteNonQuery();
@@ -176,23 +180,20 @@ namespace EcoNote.View
             //}
             //finally
             //{
-            //    if (connection != null)
-            //        connection.Close();
+            //    if (connection1 != null)
+            //        connection1.Close();
 
 
             //}
 
 
 
-           
 
 
 
-          
+
+
 
         }
-
     }
 }
-
-

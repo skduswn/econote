@@ -20,11 +20,11 @@ using System.Windows.Shapes;
 namespace EcoNote.View
 {
     /// <summary>
-    /// Exchange.xaml에 대한 상호 작용 논리
+    /// Exch.xaml에 대한 상호 작용 논리
     /// </summary>
-    public partial class Exchange : Page
+    public partial class Exch : Page
     {
-        public Exchange()
+        public Exch()
         {
             InitializeComponent();
 
@@ -206,7 +206,7 @@ namespace EcoNote.View
             int a = int.Parse(textboxc.Text) - int.Parse(price.Text);
             if (a > 0) { rest.Text = a.ToString(); }
             else { rest.Text = "구매불가"; }
-                
+
         }
 
         private void Button_Click_17(object sender, RoutedEventArgs e) //교환하기 버튼
@@ -214,11 +214,12 @@ namespace EcoNote.View
 
             int r2 = new Random().Next(1000);
             int random = r2;
-
-            if (int.Parse(textboxc.Text) < int.Parse(price.Text))
+             
+            if (int.Parse(textboxc.Text) < int.Parse(price.Text))    ///보유코인보다 비싸면 구매 불가하도록
                 MessageBox.Show("코인이 모자랍니다.");
             else
             {
+                
                 //교환 테이블 생성
 
                 try
@@ -227,12 +228,14 @@ namespace EcoNote.View
                     MySqlCommand comm = new MySqlCommand();
                     conn.Open();
 
-                    comm.CommandText = "INSERT INTO Exchange(eNum, eUserId, ePNum, ePrice) VALUES (@eNum, @eUserId, @ePNum, @ePrice)";
+                    comm.CommandText = "INSERT INTO Exchange(eNum, eUserId, ePNum, ePrice, ePName) VALUES (@eNum, @eUserId, @ePNum, @ePrice, @ePName)";
 
                     comm.Parameters.Add("@eNum", MySqlDbType.Text).Value = r2;
                     comm.Parameters.Add("@eUserId", MySqlDbType.Text).Value = textboxid.Text;
                     comm.Parameters.Add("@ePNum", MySqlDbType.Text).Value = num.Text;
                     comm.Parameters.Add("@ePrice", MySqlDbType.Text).Value = price.Text;
+                    comm.Parameters.Add("@ePName", MySqlDbType.Text).Value = name.Text;
+
 
 
                     comm.Connection = conn;
@@ -334,4 +337,5 @@ namespace EcoNote.View
         }
 
     }
+
 }

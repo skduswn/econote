@@ -60,8 +60,6 @@ C:\연주\github\EcoNote\obj\Debug\EcoNote.exe
 C:\연주\github\EcoNote\obj\Debug\EcoNote.pdb
 C:\Users\nyj54\OneDrive\바탕 화면\github\EcoNote\obj\Debug\EcoNote.csproj.AssemblyReference.cache
 C:\Users\nyj54\OneDrive\바탕 화면\github\EcoNote\obj\Debug\MainWindow.g.cs
-C:\Users\nyj54\OneDrive\바탕 화면\github\EcoNote\obj\Debug\View\Donation.g.cs
-C:\Users\nyj54\OneDrive\바탕 화면\github\EcoNote\obj\Debug\View\Exchange.g.cs
 C:\Users\nyj54\OneDrive\바탕 화면\github\EcoNote\obj\Debug\View\Home.g.cs
 C:\Users\nyj54\OneDrive\바탕 화면\github\EcoNote\obj\Debug\View\Join.g.cs
 C:\Users\nyj54\OneDrive\바탕 화면\github\EcoNote\obj\Debug\View\Login.g.cs
@@ -91,8 +89,6 @@ C:\Users\nyj54\OneDrive\바탕 화면\github\EcoNote\bin\Debug\System.Runtime.Co
 C:\Users\nyj54\OneDrive\바탕 화면\github\EcoNote\bin\Debug\System.Numerics.Vectors.dll
 C:\Users\nyj54\OneDrive\바탕 화면\github\EcoNote\bin\Debug\MySql.Data.xml
 C:\Users\nyj54\OneDrive\바탕 화면\github\EcoNote\obj\Debug\MainWindow.baml
-C:\Users\nyj54\OneDrive\바탕 화면\github\EcoNote\obj\Debug\View\Donation.baml
-C:\Users\nyj54\OneDrive\바탕 화면\github\EcoNote\obj\Debug\View\Exchange.baml
 C:\Users\nyj54\OneDrive\바탕 화면\github\EcoNote\obj\Debug\View\Home.baml
 C:\Users\nyj54\OneDrive\바탕 화면\github\EcoNote\obj\Debug\View\Join.baml
 C:\Users\nyj54\OneDrive\바탕 화면\github\EcoNote\obj\Debug\View\Login.baml
@@ -104,3 +100,7 @@ C:\Users\nyj54\OneDrive\바탕 화면\github\EcoNote\obj\Debug\EcoNote.Propertie
 C:\Users\nyj54\OneDrive\바탕 화면\github\EcoNote\obj\Debug\EcoNote.csproj.GenerateResource.cache
 C:\Users\nyj54\OneDrive\바탕 화면\github\EcoNote\obj\Debug\EcoNote.csproj.CoreCompileInputs.cache
 C:\Users\nyj54\OneDrive\바탕 화면\github\EcoNote\obj\Debug\EcoNote.csproj.CopyComplete
+C:\Users\nyj54\OneDrive\바탕 화면\github\EcoNote\obj\Debug\View\Dona.g.cs
+C:\Users\nyj54\OneDrive\바탕 화면\github\EcoNote\obj\Debug\View\Exch.g.cs
+C:\Users\nyj54\OneDrive\바탕 화면\github\EcoNote\obj\Debug\View\Dona.baml
+C:\Users\nyj54\OneDrive\바탕 화면\github\EcoNote\obj\Debug\View\Exch.baml

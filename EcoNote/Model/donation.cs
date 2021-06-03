@@ -12,10 +12,9 @@ namespace EcoNote.Model
 
         public int dNum
         {
-            get { return num; }
-            set { num = value; }
+            get { return dNum; }
+            set { dNum = value; }
         }
-
 
         private string userId;
 
@@ -32,5 +31,6 @@ namespace EcoNote.Model
             get { return money; }
             set { money = value; }
         }
+
     }
 }

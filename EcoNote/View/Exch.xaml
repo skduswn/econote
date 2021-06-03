@@ -1,4 +1,4 @@
-﻿<Page x:Class="EcoNote.View.Exchange"
+﻿<Page x:Class="EcoNote.View.Exch"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -6,7 +6,8 @@
       xmlns:local="clr-namespace:EcoNote.View"
       mc:Ignorable="d" 
       d:DesignHeight="600" d:DesignWidth="900"
-      Title="Exchange">
+      Title="Exch">
+
     <Grid>
 
         <Button Content="" HorizontalAlignment="Left" Height="135" Margin="10,10,0,0" VerticalAlignment="Top" Width="245" BorderBrush="White" RenderTransformOrigin="1.246,0.522" Click="Button_Click_1">
