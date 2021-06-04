@@ -8,6 +8,14 @@ namespace EcoNote.ViewModel
 {
     class DonationVM
     {
+        private int num;
+
+        public int dNum
+        {
+            get { return num; }
+            set { num = value; }
+        }
+
         private int money;
 
         public int dMoney

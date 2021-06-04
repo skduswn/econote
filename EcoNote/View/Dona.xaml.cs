@@ -46,6 +46,10 @@ namespace EcoNote.View
             textboxc.Text = user.uTotalC.ToString();
 
             connection.Close();
+
+
+          
+            
         }
 
 
@@ -135,56 +139,55 @@ namespace EcoNote.View
             // Donation테이블에서 uid== 해당아이디인 행의 dMoney의 합으로 누적기부금 구하기
 
 
-            ////Donation 해당아이디와 Uid같은 행들을 리스트화
+            //////Donation 해당아이디와 Uid같은 행들을 리스트화
             string conString = "Server=localhost;Database=EcoNote;UId=root;Password=5458;";
             MySqlConnection con = new MySqlConnection(conString);
-            MySqlCommand command = new MySqlCommand("select * from donation where dUserid = '" + textboxid.Text + "';", con);
+            MySqlCommand command = new MySqlCommand("select * from donation where dUserId = '" + textboxid.Text + "';", con);
             con.Open();
-            DataTable dt = new DataTable();
-            dt.Load(command.ExecuteReader());
-            List<Donation> donations = dt.DataTableToList<Donation>();
+            DataTable dtG = new DataTable();
+            dtG.Load(command.ExecuteReader());
+            List<Donation> donations = dtG.DataTableToList<Donation>();
 
+            int sumM = donations.Sum((x) => x.dMoney);
 
-            int sumD = donations.Sum((x) => x.dMoney);
 
             con.Close();
-            MessageBox.Show(sumD.ToString());
 
 
 
 
-
-            ////누적 기부금 txtbox에 넣어주기
-            //totalMoney.Text = sumD.ToString();
-
-
-            ////user의 기부금 누적기부금에 update해주기
-            //string connectionsString = @"server=localhost;userid=root;password=5458;database=econote";
-            //MySqlConnection connection2 = null;
-            //try
-            //{
-            //    connection2 = new MySqlConnection(connectionsString);
-            //    connection2.Open();
+            //누적 기부금 txtbox에 넣어주기
+            totalMoney.Text = sumM.ToString();
 
 
-            //    MySqlCommand cmd1 = new MySqlCommand();
-            //    cmd1.Connection = connection2;
+            /////////user의 기부금 누적기부금에 update해주기
+            string connectionsString = @"server=localhost;userid=root;password=5458;database=econote";
+            MySqlConnection connectiona = null;
+            try
+            {
+                connectiona = new MySqlConnection(connectionsString);
+                connectiona.Open();
 
 
-            //    cmd1.CommandText = "UPDATE user SET uTotalD = uTotalD + " + this.totalMoney + " WHERE uId='" + this.textboxid.Text + "';";
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.Connection = connectiona;
 
 
-            //    cmd1.ExecuteNonQuery();
+                cmd.CommandText = "UPDATE user SET uTotalD = uTotalD + " +sumM + " WHERE uId='" + this.textboxid.Text + "';";
 
 
-            //}
-            //finally
-            //{
-            //    if (connection1 != null)
-            //        connection1.Close();
+                cmd.ExecuteNonQuery();
 
 
-            //}
+            }
+            finally
+            {
+                if (connectiona != null)
+                    connectiona.Close();
+
+
+            }
+
 
 
 

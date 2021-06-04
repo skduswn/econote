@@ -40,5 +40,6 @@
                 <ImageBrush ImageSource="/이미지/기부하기.png"/>
             </Button.Background>
         </Button>
+
     </Grid>
 </Page>

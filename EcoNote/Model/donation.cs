@@ -12,8 +12,8 @@ namespace EcoNote.Model
 
         public int dNum
         {
-            get { return dNum; }
-            set { dNum = value; }
+            get { return num; }
+            set { num = value; }
         }
 
         private string userId;
